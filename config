@@ -112,16 +112,16 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 
 # switch to workspace
-bindsym $mod+1 exec "bash ~/.config/i3/wp.sh"
-bindsym $mod+2 exec "bash ~/.config/i3/wp.sh"
-bindsym $mod+3 exec "bash ~/.config/i3/wp.sh"
-bindsym $mod+4 exec "bash ~/.config/i3/wp.sh"
-bindsym $mod+5 exec "bash ~/.config/i3/wp.sh"
-bindsym $mod+6 exec "bash ~/.config/i3/wp.sh"
-bindsym $mod+7 exec "bash ~/.config/i3/wp.sh"
-bindsym $mod+8 exec "bash ~/.config/i3/wp.sh"
-bindsym $mod+9 exec "bash ~/.config/i3/wp.sh"
-bindsym $mod+0 exec "bash ~/.config/i3/wp.sh"
+bindsym $mod+1 exec "bash ~/.config/i3/hehehe.sh"
+bindsym $mod+2 exec "bash ~/.config/i3/hehehe.sh"
+bindsym $mod+3 exec "bash ~/.config/i3/hehehe.sh"
+bindsym $mod+4 exec "bash ~/.config/i3/hehehe.sh"
+bindsym $mod+5 exec "bash ~/.config/i3/hehehe.sh"
+bindsym $mod+6 exec "bash ~/.config/i3/hehehe.sh"
+bindsym $mod+7 exec "bash ~/.config/i3/hehehe.sh"
+bindsym $mod+8 exec "bash ~/.config/i3/hehehe.sh"
+bindsym $mod+9 exec "bash ~/.config/i3/hehehe.sh"
+bindsym $mod+0 exec "bash ~/.config/i3/hehehe.sh"
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
