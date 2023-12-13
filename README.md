@@ -3,5 +3,5 @@ confloose lolilul
 
 ### Random
 ```
-curl raw.githubusercontent.com/Ellmos/cf/main/random | sh
+curl https://raw.githubusercontent.com/Ellmos/cf/main/random | sh
 ```
